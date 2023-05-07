@@ -85,6 +85,19 @@ body {
   cursor: pointer;
 }
 
+@media screen and (max-width: 450px) {
+  .flip-clock {
+    --fcc-digit-block-width: 30px !important; /* width of digit card */
+    --fcc-digit-block-height: 40px !important; /* height of digit card, highly recommend in even number */
+    --fcc-digit-font-size: 20px !important; /* font size of digit */
+    --fcc-digit-color: #000 !important; /* color of digit */
+    --fcc-label-font-size: 9px !important;
+  }
+  .btn {
+    height: 54px;
+  }
+}
+
 @media screen and (min-width: 900px) {
   .page h1 {
     font-size: 4rem;
