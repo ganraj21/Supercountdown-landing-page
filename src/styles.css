@@ -1,1 +1,102 @@
+/* styles.css */
 
+.flip-clock {
+  --fcc-flip-duration: 0.5s; /* transition duration when flip card */
+  --fcc-digit-block-width: 30px; /* width of digit card */
+  --fcc-digit-block-height: 60px; /* height of digit card, highly recommend in even number */
+  --fcc-digit-font-size: 30px; /* font size of digit */
+  --fcc-digit-color: #000; /* color of digit */
+  --fcc-label-font-size: 10px; /* font size of label */
+  --fcc-label-color: #fff; /* color of label */
+  --fcc-background: #fff; /* background of digit card */
+  --fcc-divider-color: #000; /* color of divider */
+  --fcc-divider-height: 1px; /* height of divider */
+  --fcc-separator-size: 6px; /* size of colon */
+  --fcc-separator-color: #fff; /* color of colon */
+}
+.flip-clock {
+  font-family: "Orbitron";
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+}
+
+.page {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.page video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.page__content {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.page h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.page h3 {
+  font-weight: 300;
+  max-width: 400px;
+  margin-bottom: 3rem;
+}
+
+.btn {
+  width: 180px;
+  height: 64px;
+  background-color: #fff;
+  color: #000;
+  font-size: 1rem;
+  font-family: "Poppins";
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 0.4rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 900px) {
+  .page h1 {
+    font-size: 4rem;
+  }
+  .page h3 {
+    max-width: 600px;
+  }
+  .flip-clock {
+    --fcc-digit-block-width: 80px !important; /* width of digit card */
+    --fcc-digit-block-height: 120px !important; /* height of digit card, highly recommend in even number */
+    --fcc-digit-font-size: 60px !important; /* font size of digit */
+    --fcc-digit-color: #000 !important; /* color of digit */
+    --fcc-label-font-size: 20px !important;
+  }
+}
